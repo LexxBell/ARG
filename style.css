@@ -1,0 +1,41 @@
+.error {
+    padding: 10px;
+    color: crimson;
+    border: 1px dotted crimson;
+}
+
+.success {
+    padding: 10px;
+    color: greenyellow;
+    border: 1px dotted greenyellow;
+}
+
+li {
+    list-style-type: none;
+    padding: 4px;
+    margin: 4px;
+    border-color: rgba(165, 165, 238, 0.041);
+    background: rgba(51, 149, 255, 0.481);
+    border-radius: 5px;
+    width: fit-content;
+}
+
+div {
+    margin-left: -10px;
+    border-radius: 7px;
+    padding-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+}
+
+button {
+    margin-left: 10px;
+    height: 30px;
+    width: 70px;
+}
+
+textarea {
+    height: 40px;
+    width: 300px;
+}
