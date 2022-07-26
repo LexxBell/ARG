@@ -1,6 +1,8 @@
 const sendButton = document.querySelector('button');
 const texts = document.querySelectorAll('div');
 const ul = document.querySelector('ul');
+const form = document.querySelector('.textarea');
+const userMessage = document.querySelector('#usermessage');
 
 const blueMsg = ['Test Blue one','Test Blue two','Test Blue three',
                  'Test Blue four','Test Blue five' ];
@@ -14,9 +16,11 @@ const MAX_MESSAGES = 15;
 var totalMsgs = 0;
 var i = 0;
 
-sendButton.addEventListener('click', () => {
+
+form.addEventListener('submit', e => {
+   e.preventDefault();
    sendMessage();
-});
+})
 
 function sendMessage() {
    
@@ -24,7 +28,7 @@ function sendMessage() {
       ul.removeChild(ul.firstChild);
    }
    const pi = document.createElement('p');
-   pi.textContent = greenMsg[i];
+   pi.textContent = userMessage.value;
    ul.append(pi);
 
    if ( totalMsgs >= 4) {
@@ -39,4 +43,7 @@ function sendMessage() {
    i++;
    totalMsgs+=2;
 }
+
+
+
 
